@@ -1,0 +1,59 @@
+name: Bug Report
+description: 버그 리포트 작성용 템플릿
+labels: [bug]
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: 버그 요약
+      description: 발생한 버그를 한 문장으로 요약해 주세요
+      placeholder: 예) 로그인 시 세션이 유지되지 않는 문제
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 심각도
+      description: 버그의 심각도를 선택해 주세요
+      options:
+        - Critical (서비스 중단)
+        - High (주요 기능 사용 불가)
+        - Medium (일부 기능 오작동)
+        - Low (사소한 문제)
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce_steps
+    attributes:
+      label: 재현 방법
+      description: 버그를 재현할 수 있는 단계를 작성해 주세요
+      placeholder: |
+        1. 로그인 페이지 접속
+        2. 유효한 아이디/비밀번호 입력
+        3. 로그인 버튼 클릭
+        4. 메인 페이지로 이동
+        5. 브라우저 새로고침
+        6. 로그인이 풀려있음
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: 기대 동작
+      description: 정상적으로 동작했을 때 기대되는 결과를 작성해 주세요
+      placeholder: |
+        브라우저를 새로고침해도 로그인 상태가 유지되어야 함
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 추가 정보
+      description: 버그와 관련된 추가적인 정보나 컨텍스트를 작성해 주세요
+      placeholder: |
+        - 특정 사용자 계정에서만 발생
+        - 특정 시간대에만 발생
+        - 관련 이슈: #123
