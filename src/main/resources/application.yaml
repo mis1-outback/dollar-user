@@ -1,0 +1,9 @@
+server:
+  port: 29081
+
+spring:
+  application:
+    name: dollar-user
+
+  profiles:
+    active: dev
