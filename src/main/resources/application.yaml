@@ -1,9 +1,6 @@
-server:
-  port: 29081
-
 spring:
   application:
-    name: dollar-user
+    name: user
 
-  profiles:
-    active: dev
+  config:
+    import: configserver:http://localhost:28081
