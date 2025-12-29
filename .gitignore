@@ -37,25 +37,3 @@ dist/
 
 ### SQL ###
 *.sql
-
-HELP.md
-
-### STS ###
-.apt_generated
-.factorypath
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### IntelliJ IDEA ###
-.idea
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
