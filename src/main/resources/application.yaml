@@ -3,4 +3,4 @@ spring:
     name: user
 
   config:
-    import: configserver:http://localhost:28081
+    import: configserver:http://${CONFIG_SERVER_DOMAIN:localhost}:28081
